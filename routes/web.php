@@ -23,3 +23,7 @@ Route::get('/', function () {
 Route::get('/thing/{thing}', function (Thing $thing) {
     return $thing;
 })->name('thing.id');
+
+Route::get('/thg/{thg_hashid}', function (Thing $thing) {
+    return $thing;
+})->name('thing.hashid');

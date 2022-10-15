@@ -44,7 +44,7 @@
             <td>
               <a
                 class="block border-b border-slate-100 dark:border-slate-700 p-4 text-slate-700 dark:text-slate-400"
-                href="todo"
+                href="{{ route('thing.hashid', $t->hashid) }}"
                 title="Go to Thing page loaded via hashid">
                 {{ $t->name }} <br>
                 <strong>{{ $t->hashid }}</strong>
