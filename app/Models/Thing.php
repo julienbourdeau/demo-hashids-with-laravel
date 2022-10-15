@@ -13,6 +13,8 @@ class Thing extends Model
 
     const HASHID_PREFIX = 'thg_';
 
+    protected $appends = ['hashid'];
+
     public function user()
     {
         return $this->belongsTo(User::class);
