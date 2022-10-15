@@ -19,3 +19,7 @@ Route::get('/', function () {
         'things' => Thing::with('user')->get(),
     ]);
 });
+
+Route::get('/thing/{thing}', function (Thing $thing) {
+    return $thing;
+})->name('thing.id');
