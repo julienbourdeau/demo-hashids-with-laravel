@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Thing;
+use App\Models\User;
 use Hashids\Hashids;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
@@ -20,6 +21,10 @@ class HashidServiceProvider extends ServiceProvider
     {
         Route::bind('thg_hashid', function ($value) {
             return Thing::findOrFailByHashid($value);
+        });
+
+        Route::bind('usr_hashid', function ($value) {
+            return User::findOrFailByHashid($value);
         });
     }
 }

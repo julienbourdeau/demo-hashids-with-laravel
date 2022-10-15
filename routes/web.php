@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Thing;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +28,7 @@ Route::get('/thing/{thing}', function (Thing $thing) {
 Route::get('/thg/{thg_hashid}', function (Thing $thing) {
     return $thing;
 })->name('thing.hashid');
+
+Route::get('/usr/{usr_hashid}', function (User $user) {
+    return $user;
+})->name('user.hashid');
