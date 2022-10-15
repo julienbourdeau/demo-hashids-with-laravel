@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Thing;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('demo');
+    return view('demo', [
+        'things' => Thing::with('user')->get(),
+    ]);
 });
