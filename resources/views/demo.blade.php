@@ -9,7 +9,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body class="h-screen px-4 antialiased bg-slate-100 text-slate-600">
+<body class="h-screen px-4 antialiased bg-slate-100">
 
 </table>
 
@@ -18,13 +18,13 @@
     <table class="border-collapse table-auto w-full text-sm">
       <thead>
       <tr>
-        <th class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">
+        <th class="border-b dark:border-slate-600 font-medium p-4 pl-8 pt-0 pb-3 text-slate-500 dark:text-slate-200 text-left">
           ID
         </th>
-        <th class="border-b dark:border-slate-600 font-medium p-4 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">
+        <th class="border-b dark:border-slate-600 font-medium p-4 pt-0 pb-3 text-slate-500 dark:text-slate-200 text-left">
           Thing
         </th>
-        <th class="border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">
+        <th class="border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-500 dark:text-slate-200 text-left">
           User
         </th>
       </tr>
@@ -35,7 +35,7 @@
           <tr>
             <td>
               <a
-                class="block border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"
+                class="block border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-700 dark:text-slate-400"
                 href="todo"
                 title="Go to Thing page loaded via regular ID">
                 {{ $t->id }}
@@ -43,19 +43,20 @@
             </td>
             <td>
               <a
-                class="block border-b border-slate-100 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"
+                class="block border-b border-slate-100 dark:border-slate-700 p-4 text-slate-700 dark:text-slate-400"
                 href="todo"
                 title="Go to Thing page loaded via hashid">
                 {{ $t->name }} <br>
-                todo
+                <strong>{{ $t->hashid }}</strong>
               </a>
             </td>
             <td>
               <a
-                class="block border-b border-slate-100 dark:border-slate-700 p-4 pr-8 text-slate-500 dark:text-slate-400"
+                class="block border-b border-slate-100 dark:border-slate-700 p-4 pr-8 text-slate-700 dark:text-slate-400"
                 href="todo"
                 title="Go to user page loaded via hashid">
-                {{ $t->user->name }} <br>todo
+                {{ $t->user->name }} <br>
+                <strong>{{ $t->user->hashid }}</strong>
               </a>
             </td>
           </tr>
